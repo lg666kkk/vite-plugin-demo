@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "moduleResolution": "node",
+    "strict": false,
+    "declaration": true,
+    "noUnusedLocals": false,
+    "esModuleInterop": true,
+    "noUnusedParameters": false,
+    "outDir": "dist",
+    "module": "commonjs",
+    "lib": ["ESNext", "DOM"],
+    "sourceMap": false
+  },
+  "include": ["./src"],
+  "exclude": ["node_modules", "dist"]
+}
