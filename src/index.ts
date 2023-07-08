@@ -3,10 +3,9 @@ import { Plugin, normalizePath } from 'vite';
 const path = require('path')
 // import { readdirSync, readFileSync, writeFileSync, statSync } from 'fs';
 
-export default (pluginParams: any): Plugin => {
+export default function xxxx (pluginParams: any) {
     console.log(pluginParams)
-    let outRoot: string = ''
-    const postPlugin: Plugin = {
+    return {
         // 插件名称
         name: 'vite:xxxx',
         // 插件的执行顺序, 应该在设置完模版后执行，待定
@@ -24,9 +23,9 @@ export default (pluginParams: any): Plugin => {
             // console.log('请求响应', id)
         },
         // Vite 独有钩子, 用来记录最终的配置信息
-        configResolved({ root, publicDir, build: { outDir, ssr } }) {
-            console.log('configResolved', root, outDir, normalizePath(path.resolve(root, outDir)));
-            outRoot = normalizePath(path.resolve(root, outDir))
+        configResolved(config) {
+            // console.log('configResolved', root, outDir, normalizePath(path.resolve(root, outDir)));
+            // outRoot = normalizePath(path.resolve(root, outDir))
         },
         // 通用钩子
         options(opts) {
@@ -56,5 +55,4 @@ export default (pluginParams: any): Plugin => {
         }
       
     }
-    return postPlugin
 }
