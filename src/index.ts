@@ -3,7 +3,7 @@ import { Plugin, normalizePath } from 'vite';
 const path = require('path')
 // import { readdirSync, readFileSync, writeFileSync, statSync } from 'fs';
 
-export default function xxxx (pluginParams: any) {
+export function xxxx (pluginParams: any) {
     console.log(pluginParams)
     return {
         // 插件名称
